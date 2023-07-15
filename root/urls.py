@@ -6,7 +6,7 @@ from django.http.response import JsonResponse
 def view(request):
     import socket
     _id = socket.gethostname()
-    return JsonResponse(_id)
+    return JsonResponse({"result": _id})
 
 
 urlpatterns = [
