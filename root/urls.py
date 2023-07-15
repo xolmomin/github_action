@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.urls import path
+from django.http.response import JsonResponse
 
 
 def view(request):
     import socket
     _id = socket.gethostname()
-    return _id
+    return JsonResponse(_id)
 
 
 urlpatterns = [
